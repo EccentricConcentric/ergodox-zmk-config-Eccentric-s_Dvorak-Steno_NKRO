@@ -1,3 +1,21 @@
+01/26/2023: This fork contain's Eccentric's personal Dvorak+Steno keymap layout and change in config for NKRO functionality.
+
+Below details the steps I made to get the firmware file using the GitHub Actions workflow:
+
+0) Forked from xudongz's ergodox-zmk-config, then on my fork:
+1) In build.yaml, changed Board to `raytac_mdbt50q_rx_green` to correspond with my dongle 
+2) In config/slicemk_ergodox_dongle.conf I added the line CONFIG_ZMK_HID_REPORT_TYPE_NKRO=y
+3) In config/slicemk_ergodox.keymap I copy/pasted the keymap I generated from xudongz's SliceMK Keymap Configurator
+Once both were committed, then:
+4) Go to Actions tab
+5) Click on the latest .github/workflows/build.yml (should have a green checkmark next to it to indicate the run is completed, and should correspond to the latest commit, I think)
+6) Scroll down to Artifacts
+7) Download firmware file
+
+-------------------------------------------------------------------------------
+Below is the original Readme
+===============================================================================
+
 This repository contains the default ZMK user configuration for the [ErgoDox
 Wireless](https://www.slicemk.com/pages/ergodox-wireless) keyboard. While the
 [SliceMK Keymap Configurator](https://config.slicemk.com/) is recommended for
